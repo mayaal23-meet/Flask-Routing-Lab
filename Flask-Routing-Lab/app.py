@@ -7,11 +7,16 @@ app = Flask(  # Create a flask app
     static_folder='static'  # Name of directory for static files
 )
 
+product=['pictures','signatures','videos from maya']
 # Your code should be below
 @app.route('/')
 def home():
-	return render_template('home.html')
+	sales = ['1 pic for 7$','3 pics for 15$', '15 precent discount for subscribers']
+	return render_template('home.html', sales=sales)
 
+@app.route('/product')
+def products():
+	return render_template('product.html')
 
 # Your code should be above
 

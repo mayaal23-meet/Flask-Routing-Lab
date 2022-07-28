@@ -3,8 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
+    <style>
+    	.middle {text-align: center;}
+    	#firstimage {width: 50%;}
+    </style>
 </head>
 <body>
-	<h1>Maya's shop</h1>
+	<h1 class = 'middle'> Maya's shop</h1>
+	<p class= 'middle'>here we sell pics with the person ever: Maya! and more...</p>
+	<br>
+		<div>
+			<p class=middle>pictures/signatures/videos from maya/<a href='/product'>all products</a> </p>
+		</div>
+
+	<br><br><br><br>
+	<h2> sales in our website:</h2>
+	<ul>
+		{%for sales in sales%}
+		<li>{{sales}}</li>
+		{%endfor%}
+	</ul>
+	<img id = "firstimage" src="{{url_for('static',filename='images/cake.jpg')}}" alt="" />
 </body>
 </html>
