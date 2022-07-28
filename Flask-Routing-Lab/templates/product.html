@@ -3,10 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>Products</title>
-    <style .middle=></style>
+    <style>
+    	.middle {text-align: center;}
+    	#me {width: 50%;}
+    </style>
 </head>
-<body>
-	<h1> products>
-	<p> in maya's shop we sell lots of things</p>
+<body style="background-color:lightcoral;">
+	<h1 class="middle"> products</h1>
+	<br>
+	<p><a href='/'>back to home page</a> <a href='/cart'>shopingcart</a></p>
+	<p class="middle"> in maya's shop we sell lots of things</p>
+	<br>
+	<h3> take a picture with maya for 7$ only!</h3>
+	<img id='me' src="{{url_for('static',filename='images/maya1.jpg')}}" alt="">
+	<br><br><br><br>
+	<h3> take a video with maya for 10$</h3>
+	<p> worning! the video is very loud!</p>
+	<video width="400" height="400" controls>
+  		<source src="{{url_for('static', filename='images/movie.mp4')}}" type="video/mp4">
+  	</video>
+  	<br><br><br><br>
+  	<h3> there is olso itmes with maya's signature but we won't gonna put a pic of that from obvious reasons:)</h3>
+  	<br><br><br><br>
+  	<p class='middle'> all of the products belong to maya and when you buy it, you become a prticipant in MAYA PAPAYA's cult:)</p>
 </body>
 </html>
